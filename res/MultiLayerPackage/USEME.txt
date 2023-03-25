@@ -1,0 +1,32 @@
+[]means what user needs to define by thereself, i.e names and file path.
+Each single input must have a \n when finished, i.e  create layer first\n.
+
+create layer [UserSpecifiedName] #must be done before everything else.
+delete layer [LayerName] #delete the specified layer in model, result in the layer created after increment one level.
+
+current [LayerName] #set the layer with specified name topmost visible.
+
+save [FilePath.format] #save the image in current layer with specified file path and formate.
+saveAll #Save to the default file res/MultiLayerPackage with a Layers.txt and image name the same as layer name and jpg as default.  The txt file is in the sequence of layer's visibility.
+
+load [ImageFilePath] #load an image in the file path, an image must load before giving operations below.
+loadAll [FilePathForTXT]#load from the default package with what output from saveAll or in a same format as what saveAll is, In this assignment, we by default believe images are under same location as TXT
+
+blur #operate blur on the image
+sharpening ##operate  sharpening on the image
+sepia ##operate  sepia on the image
+greyscale ##operate  greyscale on the image
+
+The Above four operation is in a single line with nothing else
+
+invisible [LayerName] #Make the layer with user defined name visible or invisible, by default, the topmost layer is now set to be first visible layer below this one(in the order of "create").
+visible [LayerName]  # by default, the called layer is set to topmost
+
+For example, rhere are two layers first and second. And we want to invisible the first layer and blur the second:
+create layer first
+create layer second
+(load images for first and second layer.)
+current first
+invisible first
+current second
+blur
