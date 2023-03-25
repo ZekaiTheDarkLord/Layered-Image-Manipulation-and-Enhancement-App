@@ -1,0 +1,21 @@
+loadAll res/MultiLayerPackage/Layers.txt
+create layer third
+create layer fourth
+current first
+load res/b.jpeg
+delete layer first
+current second
+sharpening
+save windows.png
+current third
+load res/CheckerBoard.ppm
+invisible third
+load res/c.jpeg
+visible third
+sepia
+save Sepia.jpeg
+current fourth
+load res/d.png
+sharpening
+save aGreyScale.ppm
+saveAll

@@ -1,0 +1,13 @@
+create layer first
+create layer second
+current first
+load res/a.jpg
+blur
+save windows.ppm
+current second 	#make another layer, this is topmost and visible
+load res/b.jpg #load it in layer second
+sepia
+save Sepia.ppm #save second layer because it is topmost visible
+invisible second #make second layer (topmost) invisible
+greyscale
+save aGreyScale.jpg #save first layer because it is the topmost visible
