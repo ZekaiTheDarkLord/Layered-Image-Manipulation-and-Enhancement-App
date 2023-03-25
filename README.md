@@ -22,7 +22,7 @@ Design thinking: Under current structure, if I need to reimplement my GUI, I jus
 If I need more features, then I am able to extends previous feature interface and have another controller extends or delegate the previous controller that add up by not changing view at all, or possibly more buttons.
 Then this design satisfy changing one part with no/minimal changes to the others as professor said.
 
------------------------------------------------------------------------------------Extra---------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------Extra-------------------------------------------------------------------------------
 
 DownScaling: We added the interface Downscaling. For the downscaling, as the size of the image has changed when running the program, the return type of the apply method is Pixels[][] which represents the pxiels in the image. Also, becuase of that, we create this interface with no interfaces or classes extended. 
 
